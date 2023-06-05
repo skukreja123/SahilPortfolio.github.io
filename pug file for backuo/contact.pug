@@ -1,0 +1,27 @@
+extends base.pug
+
+block style 
+    style 
+        include ../static/style.css
+        include https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css
+
+block scripts 
+    script 
+        include ../static/script.js 
+        include https://unpkg.com/scrollreveal
+        include https://unpkg.com/typed.js@2.0.15/dist/typed.umd.js
+
+
+section#contact.contact
+  h2.heading
+    | Contact 
+    span Me!
+  form(action='/contact' method='POST')
+    .input-box
+      input(type='text' name='name' placeholder='Full Name')
+      input(type='email' name='email' placeholder='Email Address')
+    .input-box
+      input(type='number' name='number' placeholder='Mobile Number')
+      input(type='text' name='subject' placeholder='Email Subject')
+    textarea(name='' id='' cols='30' rows='10' placeholder='Your Message')
+    input.btn(type='submit' value='Send Message')

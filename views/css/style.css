@@ -1,0 +1,527 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+
+html {
+    font-size: 62%;
+    overflow-x: hidden;
+}
+
+body{
+    background-color: black;
+    color: white;
+}
+
+section{
+    min-height: 100vh;
+    padding: 10rem 9% 2rem;
+}
+
+.header{
+    /* font-size: 16px; */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 2rem 9% ;
+    background: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.header.sticky{
+    border-bottom: 1rem solid rgba(0, 0,0,.2) ;
+}
+
+.logo{
+    color: white;
+    font-size: 2.5rem;
+    font-weight: 600;
+    cursor: default;
+
+}
+
+.navbar a{
+    font-size: 1.7rem;
+    color: blueviolet;
+    margin-left: 4rem;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.navbar a:hover{
+    color: green;
+}
+
+
+#menu-id{
+    font-size: 3.6rem;
+    color:blueviolet;
+    display: none;
+}
+
+.home{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-content{
+    color: white;
+}
+
+.home-content h3{
+    font-size: 3.2rem;
+    font-weight: 700;
+}
+
+.home-content h3:nth-of-type(2){
+    margin-bottom: 2rem;
+}
+
+.home-content h1{
+    font-size: 3.2rem;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+.home-content p{
+    font-size: 1.6rem;
+}
+
+span{
+    color:aqua ;
+}
+
+.img-content img{
+    width: 35vw;
+    animation: floatImage 4s ease-in-out infinite;
+}
+/* my image continuously up and down./ */
+@keyframes  floatImage{
+    0%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(-2.4rem);
+    }
+    100%{
+        transform: translateY(0);
+    }
+    
+}
+
+.social_media a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+    background: transparent;
+    border: .2rem solid blue;
+    border-radius: 50px;
+    font-size: 2rem;
+    color: white;
+margin: 3rem 1.5rem 3rem 0;
+transition: .3s ease;
+
+}
+
+.social_media a:hover{
+    background: blue;
+    color: green;
+    box-shadow: 0 0 1rem green;
+
+}
+
+.btn{
+    display: inline-block;
+    padding: 1rem 2.8rem;
+    background-color: blue;
+    border-radius: 4rem;
+    box-shadow: 0 0 1rem green;
+    font-size: 1.6rem;
+    color: white;
+    letter-spacing: .1rem;
+    font-weight: 600;
+    transition: .5s ease;
+}
+
+.btn:hover{
+    box-shadow: none;
+}
+
+
+.about{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    background-color: rgb(26, 21, 21)
+}
+
+.about-img img{
+    width: 35rem;
+}
+
+.heading{
+    text-align: center;
+    font-size: 4.5rem;
+}
+
+.about-content h2{
+    text-align: left;
+    line-height: 1.2;
+}
+
+.about-content h3{
+    font-size: 2.6rem;
+}
+
+
+.about-content p{
+    font-size: 1.6rem;
+    margin:2rem 0 3rem ;
+}
+
+
+.sevice h2{
+    margin-bottom: 5rem ;
+}
+.service-containor{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.service-containor .service-box{
+    flex: 1 1 30rem;
+    background-color: rgb(26, 21, 21);
+    padding: 3rem 2rem 4rem;
+    border-radius: 2rem;
+    text-align: center;
+    border: .2rem solid black;
+    color: white;
+    transition: .5s ease;
+}
+
+.service-containor .service-box:hover{
+    border-color: blue;
+    transform: scale(1.02);
+}
+.service-box i{
+    font-size: 7rem;
+    color: blue;
+}
+
+.service-box h3{
+    font-size: 2.6rem;    
+}
+
+.service-box p{
+    font-size: 1.6rem;
+    margin: 1rem 0 3rem;
+}
+
+.Portfolio{
+    background-color:rgb(26, 21, 21);
+}
+
+.Portfolio h2{
+    margin-bottom: 8rem;
+}
+
+.protofio-containor{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    align-items: center;
+    gap: 2.5rem;
+}
+
+.protofio-containor .protofolio-box{
+    position: relative;
+    border-radius: 2rem;
+    box-shadow: 0 0 1rem blue;
+    overflow: hidden;
+    display: flex;   
+}
+
+.protofolio-box img{
+    width: 100%;
+    transition: .5s ease;
+}
+
+.protofolio-box:hover img{
+    transform: scale(1.1);
+}
+
+.protofolio-box .protoflio-layer{
+    font-weight: bolder;
+    position: absolute;
+    color: black;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0,0,0,-1),rgb(141, 240, 240));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 0 4rem;
+    transform:translateY(100%);
+    transition: .5s ease;
+}
+
+.protofolio-box:hover .protoflio-layer{
+    transform: translateY(0);   
+}
+
+.protoflio-layer h4{
+    font-size: 3rem;
+}
+
+.protoflio-layer p{
+    font-size: 1.6rem;
+    margin: .3rem 0 1rem;
+}
+
+.protoflio-layer a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 5rem;
+    height: 5rem;
+    background: black;
+    border-radius: 50%;
+}
+.protoflio-layer a i{
+    font-size: 2rem;
+    color: white;
+}
+.contact h2{
+    margin-bottom: 3rem;
+}
+
+.contact form{
+    max-width: 70rem;
+    margin: 1rem auto;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+
+.contact form .input-box{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.contact form .input-box input,
+.contact form textarea{
+    width: 100%;
+    padding: 1.5rem;
+    font-size: 1.6rem;
+    color: white;
+    background-color:rgb(26, 21, 21);
+    border-radius: .8rem;
+    margin: .7rem 0;
+
+}
+
+.contact form .input-box input{
+    width: 50%;
+}
+
+.contact form textarea{
+    resize: none;
+}
+
+.contact form .btn{
+    margin-top: 2rem;   
+}
+
+
+.footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 2rem 9%;
+    background-color: rgb(26, 21, 21);
+}
+
+.footer-text p{
+    font-size: 1.6rem;
+}
+
+.footer-icon a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: .8rem;
+    background-color:black;
+    border-radius: .8rem;
+    transition: .5s ease;
+}
+
+.footer-icon a:hover {
+    box-shadow: 0 0 1rem green
+
+} 
+
+.footer-icon a i{ 
+    font-size: 2.4rem;
+    color: aqua;
+    font-weight: bolder;
+}
+
+
+/* for responsive  */
+
+@media (max-width: 1200px)
+{
+    html {
+        font-size: 55%;
+    }
+}
+
+@media (max-width: 991px)
+{
+    .header{
+        padding: 2rem 3%;
+    }
+
+    .section{
+        padding: 10rem 3% 2rem;
+    }
+
+    .sevice{
+        padding-bottom: 7rem;
+    }
+
+    .Portfolio{
+        padding-bottom: 7rem;
+    }
+
+    .contact{
+        min-height: auto;
+    }
+    .footer {
+        padding: 2rem 3%;
+    }
+}
+
+@media (max-width: 768px)
+{
+    #menu-id{
+        display: block;
+    }
+
+    .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 1rem 3%;
+        background-color: black;
+        border-top: .1rem solid rgba(0, 0,0,.2);
+        box-shadow: 0 .5rem 1rem rgba(0, 0,0,.2);
+        display: none;
+    }
+    .navbar.active{
+        display: block;
+    }
+
+
+    .navbar a{
+        display: block;
+        font-size: 2rem;
+        margin: 3rem 0;
+    }
+    .home{
+        flex-direction: column
+    }
+
+    .home-content h3{
+        font-size: 2.6rem;
+    }
+
+    .home-content h1{
+        font-size: 5rem;
+    }
+
+    .img-content img{
+        width: 60vw;
+        margin-top: 4rem;
+    }
+
+    .about{
+        flex-direction: column-reverse;
+    }
+
+    .about-img img{
+        width: 60vw;
+        margin-top: 4rem;
+    }
+
+    .sevice h2{
+        margin-bottom: 3rem;
+    }
+
+    .Portfolio h2{
+        margin-bottom: 3rem;
+    }
+
+    .protofio-containor{
+        grid-template-columns: repeat(2,1fr);
+    }
+
+
+}
+
+@media (max-width: 617px){
+    .protofio-containor{
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 450px){
+    html{
+        font-size: 50%
+    }
+
+    .contact form .input-box input{
+        width: 100%;
+    }
+} 
+
+
+@media (max-width: 365px){
+    .img-content img{
+        width: 90vw;
+    }
+    .about-img img{
+        width: 90vw;
+    }
+
+    .footer{
+        flex-direction: column-reverse;
+    }
+
+    .footer p{
+        text-align: center;
+        margin-top: 2rem;
+    }
+
+} 

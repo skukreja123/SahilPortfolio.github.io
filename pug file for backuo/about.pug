@@ -1,0 +1,26 @@
+extends base.pug
+
+block style 
+    style 
+        include ../static/style.css
+        include https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css
+
+block scripts 
+    script 
+        include ../static/script.js 
+        include https://unpkg.com/scrollreveal
+        include https://unpkg.com/typed.js@2.0.15/dist/typed.umd.js
+
+
+section#about.about
+  .about-img
+    img(src='./img.jpeg' alt='')
+  .about-content
+    h2.heading
+      | About 
+      span Me
+    h3 Full Stact Developer
+    p
+      | Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vero fugit ut quod optio porro repellat aut perspiciatis, officiis corporis eos est atque totam vitae cupiditate ullam consequuntur minima voluptatem recusandae praesentium odit? Facere debitis a suscipit eveniet,
+      | repellendus eaque similique!
+    a.btn(href='#') Read More
